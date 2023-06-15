@@ -1,0 +1,34 @@
+what are the modules in node js explain clearly in depth
+
+Node.js modules are pre-written pieces of code that can be reused and shared, making them one of Node.js's most powerful features. When you create an application in Node.js, you will likely be using several different modules to provide functionality such as a web server, database communications, APIs, etc.
+
+The Node.js Core Modules:
+1. HTTP – use this module to create an HTTP server and client. It’s also used to make HTTP requests and manage them.
+2. FS or File System – this module provides a way to interact with the file system and read, write, append and delete files.
+3. Path – use this module to work with file and directory paths. It simplifies path manipulation, allowing you to combine and normalize paths without worrying about platform-specific formats.
+
+4. OS or Operating System – the OS module provides information about the current system, such as total memory and free memory.
+
+5. Events – the events module provides the EventEmitter class, which you can use to emit and listen for events in your applications.
+
+6. Buffer – use this module to work with binary data in Node.js.
+
+7. Util – this module provides utility functions for logging, debugging and formatting.
+
+8. Stream – use this module to work with stream-based data, such as reading from and writing to files.
+
+9. Crypto – use this module for secure cryptographic operations. It provides functions for hashing, encrypting and decrypting data.
+
+10. Process – use this module to manage and control the application process itself.
+
+11. Query String – use this module to parse and structure URL query strings.
+
+12. Assert – use this module to make unit tests and assertions about your application.
+
+13. Child Processes – use this module to spawn and manage child processes.
+
+14. Net – use this module for socket-based network programming.
+
+15. VM – use this module to create mini Node.js environments that you can execute code in.
+
+16. Timers – use this module to work with timer functions like setTimeout and setInterval.
