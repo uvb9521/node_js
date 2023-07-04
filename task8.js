@@ -1,9 +1,11 @@
 const http = require("http");
 const fs = require("fs");
+
 const server = http.createServer((req, res) => {
   const url = req.url,
     method = req.method;
   const path = require("path");
+
   if (url === "/") {
     fs.readFile("message.txt", { encoding: "utf8" }, (err, data) => {
       if (err) {
@@ -16,7 +18,7 @@ const server = http.createServer((req, res) => {
         '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>'
       );
       res.write("</html>");
-      return res.end();
+      // return res.end();
     });
   }
   if (url === "/message" && method === "POST") {

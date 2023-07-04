@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%=pageTitle%>
+    </title>
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/product.css" />
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <ul class="main-header-item-list">
+                <li class="main-header-item"><a class="active" href="/">Shop</a></li>
+                <li class="main-header-item">
+                    <a href="/add-product">Add Product</a>
+                </li>
+                <li class="main-header-item"><a href="/contact_us">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if(prods.length>0) {%>
+            <div class="grid">
+                <%for(let contacts of prods){%>
+                    <article class="card product-item">
+                        <header class="card-header">
+                            <h1 class="product-title">
+                                <%=contacts.name%>
+                            </h1>
+                        </header>
+                        <div class="card-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRNuiBY5AGqRjC890IW9MQ5_p5NYSysbFSBfs8LIcl8DSYx7sTngU8xpzyHuwitNfUmV4&usqp=CAU"
+                                alt="User Icon">
+                        </div>
+                        <div class="card-content">
+                            <p class="product-description">Thanks For contact Us </p>
+                            <p class="product-description">Our Customer Exective Will Reach You Soon... Keep Going</p>
+                        </div>
+                    </article>
+                    <%}%>
+            </div>
+            <%} else {%>
+                <h2 class="product-description">Everybody issues Are Resolved</h2>
+                <%}%>
+    </main>
+</body>
+
+</html>
