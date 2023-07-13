@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Registration Page</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .product-form {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .form-control {
+            margin: 1rem 0;
+        }
+
+        .form-control label,
+        .form-control input {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-control input {
+            border: 1px solid rgb(198, 166, 119);
+            font: inherit;
+            border-radius: 2px;
+        }
+
+        .form-control input:focus {
+            border-color: rgba(239, 225, 104, 0.8);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+                0 0 8px rgba(239, 237, 104, 0.6);
+            outline: 0 none;
+        }
+
+        .button {
+            font: inherit;
+            border: 1px solid #a10073;
+            color: #930169;
+            background: white;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 30%;
+            font-size: 25px;
+        }
+
+        .button:hover,
+        .button:active {
+            background-color: #d20397;
+            color: white;
+        }
+
+        .link {
+            font: inherit;
+            border: 1px solid #a10073;
+            color: #930169;
+            background: white;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 0 25px 0 25px;
+            float: right;
+            margin-left: 2px;
+        }
+
+        .link:hover,
+        .link:active {
+            background-color: #d20397;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <form class="product-form" action="/got" method="POST">
+            <h1>Booking Registration Page</h1>
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="n1ame" />
+            </div>
+            <div class="form-control">
+                <label for="email">E mail</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div class="form-control">
+                <label for="number">Number</label>
+                <input type="number" name="number" id="number" />
+            </div>
+            <button type="submit" class="button">Submit</button>
+
+            <% if(prods.length>0){%>
+                <% for(let user of prods) {%>
+                    <p>
+                        <%= user.name %> &nbsp - &nbsp <%= user.email %> &nbsp - &nbsp<%= user.number %>
+                                    <!-- <button type="submit" class="link">Delete</button> -->
+                                    <a href="/delete" class="link">Delete</a>
+                                    <a href="/edit" class="link">Edit</a>
+                                    <input type="hidden" value="<%= user.id %>" name="userId" />
+                    </p>
+
+                    <%}%>
+                        <%}%>
+        </form>
+
+    </main>
+</body>
+
+</html>
